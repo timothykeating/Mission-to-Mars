@@ -106,10 +106,11 @@ def mars_facts():
     
     # Assign columns and set index of dataframe
     df.columns=['description', 'Mars', 'Earth']
-    df.set_index('description', inplace=True)
+    # df.set_index('description', inplace=True)
+    
 
     # Convert dataframe into HTML format, add bootstrap
-    return df.to_html()
+    return df.to_html(index=False)
 
 if __name__ == "__main__":
 
